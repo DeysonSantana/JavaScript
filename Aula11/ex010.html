@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            width: 80px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Controle de Velocidade</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+    </div>
+
+    <script>
+        function verificar(){
+            var vel = window.document.getElementById('vel')
+            var res = window.document.querySelector('div#res')
+            var vel1 = Number(vel.value)
+
+            if(vel1 >= 100){
+                res.innerHTML = `MULTADO! Sua velocidade atual é de ${vel1} km/h. Você ultrapassou o limite de velocidade. Pare o carro e saia do veículo!`
+            }else{
+            res.innerHTML = `Dentro do limite de velocidade. Boa viagem!`
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com Dom</title>
+    <style>
+        body{
+            background-color: rgb(6, 99, 240);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>Dom</strong> em JavaScript</p>
+    <div>Clique em Mim</div>
+
+    <script>
+        //Navegando entre os elementos da arvore DOM; Selecionando por:
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //Marca
+        var p1 = window.document.getElementById('') //id
+        var p1 = window.document.getElementsByName('') //Name
+        var p1 = window.document.getElementsByClassName('')//Classe
+        var p1 = window.document.querySelector('') //Seletor
+        //window.document.write('Está escrito assim: ' + p1.innerText)
+        //p1.style.color = 'blue'
+        //corpo.style.backgroundColor = 'black'
+    </script>
+    
+</body>
+</html>

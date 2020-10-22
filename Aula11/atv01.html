@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+
+    <style>
+        input{
+            width: 80pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>De Qual País Você é?</h1>
+
+    <strong>Qual o Seu Pais de Origem? : </strong><input type= "text" name="txtpais" id="txtpais"> 
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"><strong>Resultado</strong>
+    </div>
+
+    <script>
+        function verificar() {//Inicio da função
+            var pais = window.document.getElementById('txtpais')
+            var res = window.document.querySelector('div#res')
+            var nacionalidade = String(pais.value)//Covertendo o valor para string
+
+            if(nacionalidade == 'BRASIL') {//inicio da codicional composta
+                res.innerHTML = `Você nasceu no BRASIL. Você é Brasileiro!`
+            }else{
+                res.innerHTML = `Você é do ${String(pais.value)}, ou seja, estrangeiro!`
+            }//Fim da condicional composta
+        }//Fim da função
+    </script>
+</body>
+</html>

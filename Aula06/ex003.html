@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex001-Primeiro_Programa</title>
+    
+    <style>
+        body{
+            background-color: #b45050;
+        }
+        h1{
+            color: white;
+        }
+        p{
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+       var n1 = window.prompt("Digite um numero inteiro!")
+       var n2 = window.prompt("Digite  outro numero inteiro!")
+       var s = parseInt(n1) + parseInt(n2) //converte string em int
+       //window.alert('A soma do valores ' + n1 + ' e ' + n2 + ' é ' + s )
+       window.alert(`A soma do valores ${n1} e ${n2} é ${s}`) //Método templetString para fazer interpolação usado $
+       // + pode servir para concatenação
+       // + pode servir como adição, para isso é nescessário converter o valor para int
+       // String() ou n.toString(), serve para converter valores inteiros em strings'
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+
+    <style>
+        h1{
+            font: normal 30pt caimbra;
+        }
+
+        <p>{
+            font: italic 35pt verdana;
+        }
+
+        body{
+            width: 1080px;
+            height: 720px;
+            background-color: rgb(152, 238, 13);
+            font: normal 14pt verdana;
+        }
+
+        input{
+            width: 100px;
+            
+        }
+        
+        #res{
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Que dia é hoje?</h1>
+
+
+    <p>Sabemos que a semana tem 7 (sete) dias de 24 horas, totalizando 168 horas. Dentre esse sete dias, algumas pessoas trabalham 5 ou 6.
+        Mas tem aquelas que trabalham a semana inteira...coitados. Enfim, a perguta que não quer calar é: que dia é hoje???
+        O computador assim como nós ele sabe que uma semana tem 7 dias, mas diferente de nós que contamos de 1-7, ele conta de 0-6.<br><br>
+        Então, digite um numero entre 0-6 par descobrir qual o dia da semana correspondente!</p>
+
+    <b>Escolha um numero entre 0 e 6:</b> <input type="number" name="txtsem" id="txtsem">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"><b>Resultado</b></div>
+
+    <script>
+        function verificar(){
+            var txtsem = window.document.getElementById('txtsem')
+            var res = window.document.querySelector('div#res')
+            var txt = Number(txtsem.value)
+
+            //var atual = new Date
+            //var dia = atual.getDay
+
+            switch(txt){
+                case 0:
+                    res.innerHTML = '<b>Domingo</b>'
+                break
+
+                case 1: 
+                    res.innerHTML = '<b>Segunda-feira</b>'
+                break
+
+                case 2: 
+                    res.innerHTML = '<b>Terça-feira</b>'
+                break
+
+                case 3: 
+                    res.innerHTML = '<b>Quarta-feira</b>'
+                break
+
+                case 4: 
+                    res.innerHTML = '<b>Quinta-feira</b>'
+                break
+
+                case 5:
+                    res.innerHTML = '<b>Sexta-feira</b>'
+                break
+
+                case 6:
+                    res.innerHTML = 'Sábado'
+                break
+
+                default:
+                    res.innerHTML = '[Numero Inválido] Digite numeros entre 0-6'
+                break
+            }
+        }
+    </script>
+     
+</body>
+</html>
